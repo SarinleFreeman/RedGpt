@@ -26,32 +26,4 @@ class GPTReader:
         response = self.generate_text(f"{prompt}: {text}")
         return response
 
-    @staticmethod
-    def save_to_json(post, summary, output_folder="RedGPT_summary_files/json", output_file=None):
-        # Create output folder if it doesn't exist
-        if not os.path.exists(output_folder):
-            os.makedirs(output_folder)
-
-        # Generate a unique ID based on the current date and time
-        unique_id = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
-
-        # Set the output file name if not provided
-        if output_file is None:
-            output_file = f"summary-{unique_id}.json"
-
-        # Combine output folder and file name
-        output_path = os.path.join(output_folder, output_file)
-
-        data = {
-            "post": {
-                "title": post.title,
-                "author": str(post.author),
-                "score": post.score,
-                "url": post.url,
-                "body": post.selftext,
-            },
-            "summary": summary,
-        }
-        with open(output_path, "w") as f:
-            json.dump(data, f, indent=2)
 
