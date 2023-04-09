@@ -39,12 +39,12 @@ chat_box.send_keys("Hey Chatgpt, i'm accessing you through an awesome python scr
                    "LET'S GOOOOOO!!"
                      + Keys.RETURN)
 
-time.sleep(10)
 
-exit()
 # Find the response text in the chat window and print it
-response_text = driver.find_element(By.XPATH, "//div[@data-testid='messageContent']")[-1].get_attribute("textContent")
-print(response_text)
+elements = driver.find_element(By.CSS_SELECTOR,".markdown.prose.w-full.break-words.dark:prose-invert.light")
+latest_element = elements[-1]  # get the last element in the list
+paragraph = latest_element.find_element(By.TAG_NAME, "p").text
+print(paragraph)
 
 # Close the browser window
 driver.quit()
