@@ -21,7 +21,7 @@ git clone https://github.com/your-username/redgpt.git
 
 Install the required Python packages:
 
-```
+``
 pip install -r requirements.txt
 ```
 
@@ -37,7 +37,7 @@ To obtain an OpenAI API key, follow these steps:
 
 - [Sign up for an OpenAI account](https://beta.openai.com/signup/)
 - [Navigate to the API keys page](https://beta.openai.com/account/api-keys/)
-- Create a new API key and copy it to your clipboard
+- Create a new API key and note it down
 
 
 ### Reddit API credentials
