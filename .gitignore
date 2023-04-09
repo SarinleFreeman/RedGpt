@@ -18,3 +18,4 @@ venv/
 
 # Files
 RedGPT_summary_files/*
+__pycache__/*
