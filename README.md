@@ -21,7 +21,7 @@ git clone https://github.com/your-username/redgpt.git
 
 Install the required Python packages:
 
-``
+```
 pip install -r requirements.txt
 ```
 
